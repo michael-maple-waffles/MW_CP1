@@ -10,6 +10,8 @@ name_input = ""
 name_container = [""]
 color = ""
 age = ""
+
+
 #function to ask who they are
 def whoAreYou():
     global name_container
