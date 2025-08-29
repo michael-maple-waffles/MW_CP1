@@ -1,5 +1,5 @@
 #MW_CP1 grade calculator practice
-
+#I am so cool ;)
 print(" input the grades you have for all 7 of your classes")
 
 grade1 = float(input("What is your grade for your first class? "))
