@@ -3,6 +3,8 @@
 #variables
 crew_size = 0
 
+crew_shares = 0.00
+
 money_earned = 0.00
 
 Shares = 0.00
@@ -20,13 +22,16 @@ money_earned = float(input("How much money was earned by the crew?\n").strip())
 
 crew_size = int(input("How many members of the crew are there? (not including captain and first mate) \n").strip())
 
-shares = float((money_earned-(500*crew_size)) / (crew_size + 10))
+shares = float(money_earned / (crew_size + 10))
 
 captian_earnings = shares*7
 
 firstmate_earnings = shares*3
-if shares >= 0:
-    print(f"Your captain gets ${captian_earnings:.2f}\n\n Your first mate gets ${firstmate_earnings:.2f} \n\n Your crew still needs ${shares:.2f}")
+
+crew_shares = shares - 500
+
+if crew_shares >= 0 and shares >= 0:
+    print(f"Your captain gets ${captian_earnings:.2f}\n\n Your first mate gets ${firstmate_earnings:.2f} \n\n Your crew still needs ${crew_shares:.2f}")
 else:
     print("Your crew has gone bankrupt.")
 
