@@ -24,9 +24,26 @@ stell = {
     
 }
 
+wonderwing = {
+    "hp" : 10,
+    "model" : "-/*\-",
+    "location_x" : 0,
+    "location_y" : 0,
+    "dazzle" : random.randint(2,5),
+}
+
 boulderwing = {
     "hp" : 35,
-    "defeated" : False
-
+    "model" : "/|\"
+    "position" : "neither",
+    "location_x" : 0,
+    "location_y" : 0,
+    "defeated" : False,
+    "boulder_vest" : random.randint(1,3),
+    "slam" : 8,
+    "slam_miss" : 4,
+    "falling_rubble" : 2,
+    "swoop_claw" : 5,
+    "swoop_miss" : random.randint(2,3),
 }
 
