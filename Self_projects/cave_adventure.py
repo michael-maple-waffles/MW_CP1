@@ -9,7 +9,7 @@ import random
 stell = {
     #basic things
     "hp" : 0,
-    "swipe" : random.randint(3 ,5),
+    "swipe" : random.randint(3 ,5 ),
 
     #gameplay
     "location" : 0,
@@ -21,6 +21,7 @@ stell = {
     "hyper_jump" : 0,
     "bubble_trouble" : 0,
     "starshot_power" : 0,
+    
 }
 
 boulderwing = {
