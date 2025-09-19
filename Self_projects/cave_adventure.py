@@ -8,8 +8,8 @@ import random
 #character variable
 stell = {
     #basic things
-    "hp" : 0,
-    "swipe" : random.randint(3 ,5 ),
+    "hp" : 10,
+    "swipe" : random.randint(3 ,5),
 
     #gameplay
     "location" : 0,
@@ -46,4 +46,3 @@ boulderwing = {
     "swoop_claw" : 5,
     "swoop_miss" : random.randint(2,3),
 }
-
