@@ -13,28 +13,32 @@ stell = {
 
     #gameplay
     "location" : 0,
-    "locate_X" : 1,
     "locate_Y" : 1,
     #abilities
     "boulderwing_vest" : 0,
     "starforce_dash" : 0,
     "hyper_jump" : 0,
     "bubble_trouble" : 0,
-    "starshot_power" : 0,
+    "star_power" : 0,
+    "starshot_ready" : False,
     
 }
 
+rollytolli = {
+    "hp" : 5,
+    "defeated" : False,
+    "zoom" : 3,
+    "zoom_bounce" : 5,
+}
+
 wonderwing = {
-    "hp" : 10,
-    "model" : "-/*\-",
-    "location_x" : 0,
-    "location_y" : 0,
+    "hp" : 8,
+    "defeated" : False,
     "dazzle" : random.randint(2,5),
 }
 
 boulderwing = {
     "hp" : 35,
-    "model" : "/|\"
     "position" : "neither",
     "location_x" : 0,
     "location_y" : 0,
@@ -46,3 +50,5 @@ boulderwing = {
     "swoop_claw" : 5,
     "swoop_miss" : random.randint(2,3),
 }
+
+
