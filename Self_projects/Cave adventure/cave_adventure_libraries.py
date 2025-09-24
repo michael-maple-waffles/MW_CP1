@@ -40,8 +40,6 @@ wonderwing = {
 boulderwing = {
     "hp" : 35,
     "position" : "neither",
-    "location_x" : 0,
-    "location_y" : 0,
     "defeated" : False,
     "boulder_vest" : random.randint(1,3),
     "slam" : 8,
