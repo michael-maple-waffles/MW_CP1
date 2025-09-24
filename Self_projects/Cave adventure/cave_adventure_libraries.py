@@ -19,6 +19,7 @@ stell = {
     "hyper_jump" : 0,
     "bubble_trouble" : 0,
     "star_power" : 0,
+    "in_danger" : "",
     "starshot_ready" : False,
     
 }
