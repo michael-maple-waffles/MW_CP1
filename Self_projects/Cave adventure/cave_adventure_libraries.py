@@ -3,7 +3,6 @@
 
 #import libraries
 import random
-import classes_in_game
 
 #character variable
 stell = {
