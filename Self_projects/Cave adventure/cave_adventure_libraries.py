@@ -20,7 +20,7 @@ stell = {
     "bubble_trouble" : 0,
     "star_power" : 0,
     "in_danger" : "",
-    "starshot_ready" : False,
+    "starshot_ready" : 0,
     
 }
 
