@@ -17,7 +17,10 @@ class AttackType:
         self.row_display = row_display
         self.row_dmg = row_dmg
     
-    def attack(self)
+    def attack(self, dmg_zone_high, dmg_zone_low):
+        if stell["locate_Y"] == 1 and stell["locate_Y"] not in (dmg_zone_high and dmg_zone_low):
+            print(f"-{self.row_display[1]}\n-{self.row_display[2]}\n-{self.row_display[3]}\n-{self.row_display[4]}\nP{self.row_display[5]}")
+        elif stell["locate_Y"] == 1 and stell["locate_Y"] in (dmg_zone_high and dmg_zone_low):
 #enemy class
 class Enemy:
 
