@@ -21,6 +21,7 @@ stell = {
     "star_power" : 0,
     "in_danger" : "",
     "starshot_ready" : 0,
+    "stellar_strike" : random.randint(5,10)
     
 }
 
