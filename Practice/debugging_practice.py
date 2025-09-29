@@ -17,13 +17,13 @@ def start_game():
 
     while not game_over:
         
-        guess = int(input("Enter your guess: "))#Guess was a string and therefore couldnt be used in future variables
+        guess = int(input("Enter your guess: "))#Guess was a string and therefore couldnt be used in future variables 
         
-        if attempts >= max_attempts:#if was attached to another if, making the condition not important, also needed an else.
+        if attempts >= max_attempts:#if was attached to another if, making the condition not important, also needed an else. syntax
             print(f"Sorry, you've used all {max_attempts} attempts. The number was {number_to_guess}.\n")
             game_over = True
         
-        else:#previous if didnt have this condition
+        else:#previous if didnt have this condition syntax error
            
             print(f"You have {max_attempts - attempts} attempts left.\n")
             
@@ -34,7 +34,7 @@ def start_game():
             elif guess > number_to_guess:
                 print(f"Too high! Try again.\n")
                 
-                attempts += 1#added because it made the previous conditional unusabel
+                attempts += 1#added because it made the previous conditional unusabel run time error
 
             elif guess < number_to_guess:
                 print(f"Too low! Try again.\n") 
@@ -43,7 +43,7 @@ def start_game():
 
             else: #previous conditional didnt have this condition
                 print(f"That was an incorrect input, make sure you are using a number.\n")
-        #"continue" was un important to the code
+        #"continue" was un important to the code logic error
 
         
 
