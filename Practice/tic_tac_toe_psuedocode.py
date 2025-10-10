@@ -32,10 +32,25 @@
     #loop for CONDITION in WIN_CONDITIONS
         #check if SPACE[CONDITION[1]] == SPACE[CONDION[2]] == SPACE[CONDITION[3]] == "X"
             #show "You Win!"
+            #return True
         #check else if SPACE[CONDITION[1]] == SPACE[CONDION[2]] == SPACE[CONDITION[3]] == "0"
-        #show "Oops, you lose..."
+            #show "Oops, you lose..."
+            #return True
     #if all(num in [X,O] for num in SPACE)
-        #oops a tie
+        #show oops a tie 
+        #return True
 
 
 #function to run the game
+    #call function to restart
+    #while win_conditions is False
+        #Functin to show board.
+        #function for turn
+        #function for win check
+        #function for robot turn
+        #function for win check
+
+#while true
+    #ask if player wants to play
+    #if player says yes call run game
+    #else if player says no, break
