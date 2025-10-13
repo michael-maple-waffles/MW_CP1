@@ -47,16 +47,24 @@ def requirementCheck():
     password = input("Input your password: ")
     #check len of password if its greater than or equal to 8, 
     #  than PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(LENGTH) = True PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(POINTS) += 1
+    password_library[password] = PasswordQualities(0,0,0,0,0)
     if len(password) >=8:
-        password_library[password] = PasswordQualities(1,0,0,0,0)
+        password_library[password].length = 1
     
     #for  LETTER in PASSWORD:
+    for letter in password:
         #check if PASSWORD(letter) is upper
+        if password(letter).isupper():
             #if true add one point and set PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(UPPER) to true
+            password_library[password].uppercase = 1
         #check if password(letter) is lower
+        elif password(letter).islower():
             #if true add one point and set PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(LOWER) to true
+            password_library[password].lowercase = 1
         #check if PASSWORD(letter) is digit
+        elif password(letter).isdigit():
             #if true add one point and set PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(number) to true
+            password_library[password].number = 1
         #check if PASSWORD(letter) is in CHAR
             #if true add one point and set PASSWORD_LIBRARY[PASSWORD].PASSWORD_QUALITIES(special_char) to true
 
