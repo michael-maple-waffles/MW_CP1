@@ -91,8 +91,8 @@ def run():
                     requirementCheck()
                 elif option == "2" and bool(password_library) :
                     for keyword in password_library:
-                        print(f"\nPassword: {keyword} Score: {password_library[keyword].points}")
-                elif option == "2" and password_library == False:
+                        print(f"\nPassword: {keyword}\n Score: {password_library[keyword].points}\n")
+                elif option == "2" and bool(password_library) == False:
                     print("You dont have any passwords yet.")
                 elif option == "3":
                     break
