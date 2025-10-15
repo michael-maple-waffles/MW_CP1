@@ -103,7 +103,7 @@ def stell_turn (monster):
 
     while actions_left > 0:
         if stell["boulderwing_vest"] == 1 and stell["starforce_dash"] == 1 and (stell["hyper_jump"] == 1 and stell["locate_Y"] ==1) and stell["bubble_trouble"] == 1 and stell["star_power"] == 5 and stell["starshot_ready"] == 3:
-            stell_input = input(f"{stell["in_danger"]}.\n\n Starshot: ready \n\n Child, you have {actions_left} actions left, your actions are:\n\n Press 1 for swipe (you will fall one, deals damage scaling with star power)\n Press 2 for jump (sends you up two)\n Press 3 for dash (saves half of your actions rounded up for your next turn, ends all action)\n Press 4 for stellar strike (causes you to fall one, removes all actions, deals large damage based on steller power) \n Press 5 for Star Recersive (deals little dmg, and refunds current action, beware using this will hurt you will also fall one)\n Press 6 for great slam (slams you to the ground, dealing damage based on how far you fell)\n Press 7 for upward starforce dash (A regular dash, but you move up once)\n Press 8 for downward starforce dash (A regular dash, but you move down once)\n Press 9 for hyper jump (a jump that puts you in the ceiling, can only be used on the ground)\n Press 10 for bubble trouble (holds you where you are)\n Press 11 for Starshot (Deals extremely high amounts of damage takes time to recharge)")
+            stell_input = input(f"{stell["in_danger"]}.\n\n Starshot: ready \n\n Child, you have {actions_left} actions left, your actions are:\n\n Press 1 for swipe (you will fall one, deals damage scaling with star power)\n Press 2 for jump (sends you up two)\n Press 3 for dash (saves half of your actions rounded up for your next turn, ends all action)\n Press 4 for stellar strike (causes you to fall one, removes all actions, deals large damage based on steller power) \n Press 5 for Star Recersive (deals little dmg, and refunds current action, beware using this will hurt you will also fall one)\n Press 6 for great slam (slams you to the ground, dealing damage based on how far you fell)\n Press 7 for upward starforce dash (A regular dash, but you move up once)\n Press 8 for downward starforce dash (A regular dash, but you move down once)\n Press 9 for hyper jump (a jump that puts you in the ceiling, can only be used on the ground)\n Press 10 for bubble trouble (holds you where you are)\n Press 11 for Starshot (Deals extremely high amounts of damage takes time to recharge)\n Press 12 if you are confused and would like a rule refresher.\n (press 1,2,3,4,5,6,7,8,9,10,11, or 12):")
             if stell_input == "1":
                 monster.hp -= stell["swipe"] + stell["star_power"]
                 stell["locate_Y"] -= 1
@@ -115,4 +115,20 @@ def stell_turn (monster):
                 actions_saved = round(actions_left / 2)
                 actions_left = 0
             elif stell_input == "4":
-                monster.hp -= (2 * actions_left)+stell["stellar_strike"] 
+                monster.hp -= (2 * actions_left)+stell["stellar_strike"]
+            elif stell_input == "5":
+                pass
+            elif stell_input == "6":
+                pass
+            elif stell_input == "7":
+                pass
+            elif stell_input == "8":
+                pass
+            elif stell_input == "9":
+                pass
+            elif stell_input == "10":
+                pass
+            elif stell_input == "11":
+                pass
+            elif stell_input == "12":
+                pass
