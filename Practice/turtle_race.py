@@ -7,9 +7,7 @@ import random
 position = 0
 
 #function for turtle win
-def winner(racer):
-    if racer.xcor() >= 300:
-        return(f"{racer} has won")
+
     
 #defining 5 turtles
 finish_line = turtle.Turtle()
@@ -22,6 +20,7 @@ orange = turtle.Turtle()
 
 #list of turtles 
 turtles = [red, blue, green, purple, orange]
+turtles_indexed = ["red","blue", "green", "purple", "yellow"]
 
 #turtle colors
 red.color("red")
@@ -48,20 +47,36 @@ finish_line.right(90)
 finish_line.pendown()
 finish_line.forward(140)
 
+def winner():
+    indexed = 0
+    for racer in turtles:
+        indexed += 1
+
+        if racer.xcor() >= 300:
+            return indexed
+        
+        
 #function for moving turtles
 def mover():
+    turn = 1
+    victor = False
     while True:
         for turtle in turtles:
-            turtle.forward(random.randint(10,50))
-            winner(turtle)
-            if winner == f"{turtle} has won":
-                victor = winner
-                break
+            if turn == 1:
+                move = random.randint(10,18)
+                turtle.forward(move)
+                turn +=1
             else:
-                continue
+                move = random.randint(10,25)
+                turtle.forward(move)
+            if bool(winner()) == True:
+                victor = bool(winner())
+                break
+            
+            
         if victor == True:
-            break
+            return f"{turtles_indexed[winner()-1]} has won"
         else:
             continue
 
-mover()
+print(mover())
