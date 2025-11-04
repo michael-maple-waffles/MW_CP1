@@ -7,7 +7,7 @@ import turtle
 
 #function that randomly generates every peice in a collumn or row
 pick = (0,1)
-row = [[1,1,1,1,1,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,1,1,1,1,1]]
+row = [[0,1,1,1,1,1],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,1,1,0]]
 collumn = [[1,1,1,1,1,1],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,1,1,1]]
 
 def generate(direction):
@@ -22,7 +22,7 @@ def generate(direction):
         elif counter < 8:
             for cord in direct:
                 form = random.choice(pick)
-                direction[counter[cord[checking]]] = form
+                direction[counter][cord] = form
                 checking += 1
             counter += 1
         else:
@@ -30,9 +30,9 @@ def generate(direction):
 
 #function to determine if everything is solvable
 def isSolvable(grid_row, grid_collumn):
-    size = len(grid_row) - 3
+    size = len(grid_row) - 2
     visited = []
-    stack = [(0,0)]
+    stack = [(1,1)]
 
     while stack:
         x, y = stack.pop()
@@ -45,6 +45,41 @@ def isSolvable(grid_row, grid_collumn):
 
         visited.add((x,y))
 
-        if 
+        if grid_collumn[x-1][y-1] == 0:
+            stack.add(x-1,y)
+
+        if grid_collumn[x][y-1] == 0:
+            stack.add(x+1,y)
+
+        if grid_row[y-1][x-1] == 0:
+            if y > 0:
+                stack.add(x,y-1)
+
+        if grid_row[y][x-1] == 0:
+            if y < 7:
+                stack.add(x,y+1)
+    else:
+        return False
+
 
 #function that makes the turtle build the maze
+def maker(print_row, print_collumn):
+    height = 0
+    for grid in print_row:
+        for position in grid:
+            if position == 0:
+                turtle.penup
+            else:
+                turtle.pendown
+            
+            turtle.forward(20)
+        height += 20
+        turtle.penup
+        turtle.position(0,height)
+    
+    turtle.penup
+    turtle.position(0,0)
+    
+    for grid in print_collumn:
+        for position in grid
+
