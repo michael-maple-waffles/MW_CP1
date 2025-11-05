@@ -7,8 +7,8 @@ import turtle
 
 #function that randomly generates every peice in a collumn or row
 pick = (0,1)
-row = [[0,1,1,1,1,1],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,1,1,0]]
-collumn = [[1,1,1,1,1,1],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,1,1,1]]
+row = [[0,1,1,1,1,1,1],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[1,1,1,1,1,1,0]]
+collumn = [[1,1,1,1,1,1,1],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[1,1,1,1,1,1,1]]
 
 def generate(direction):
     global row
@@ -19,7 +19,7 @@ def generate(direction):
         if counter == 0:
             counter += 1
             continue
-        elif counter < 8:
+        elif counter < 7:
             for cord in direct:
                 form = random.choice(pick)
                 direction[counter][cord] = form
@@ -30,7 +30,7 @@ def generate(direction):
 
 #function to determine if everything is solvable
 def isSolvable(grid_row, grid_collumn):
-    size = len(grid_row) - 2
+    size = len(grid_row) - 1
     visited = []
     stack = [(1,1)]
 
@@ -43,43 +43,79 @@ def isSolvable(grid_row, grid_collumn):
         if (x,y) in visited:
             continue
 
-        visited.add((x,y))
+        visited.append((x,y))
 
         if grid_collumn[x-1][y-1] == 0:
-            stack.add(x-1,y)
+            stack.append((x-1,y))
 
         if grid_collumn[x][y-1] == 0:
-            stack.add(x+1,y)
+            stack.append((x+1,y))
 
         if grid_row[y-1][x-1] == 0:
             if y > 0:
-                stack.add(x,y-1)
+                stack.append((x,y-2))
 
         if grid_row[y][x-1] == 0:
             if y < 7:
-                stack.add(x,y+1)
+                stack.append((x,y+1))
     else:
         return False
 
 
 #function that makes the turtle build the maze
 def maker(print_row, print_collumn):
+    counting = 0
+    counter = 0
     height = 0
+    distance = 0
     for grid in print_row:
         for position in grid:
-            if position == 0:
-                turtle.penup
+            if print_row[counting][counter] == 0:
+                turtle.penup()
             else:
-                turtle.pendown
+                turtle.pendown()
             
             turtle.forward(20)
+            counter += 1
+
+        counter = 0
+        counting+=1
         height += 20
-        turtle.penup
-        turtle.position(0,height)
-    
-    turtle.penup
-    turtle.position(0,0)
-    
+        turtle.penup()
+        turtle.teleport(0,height)
+
+    counting = 0
+    counter = 0
+
+    turtle.penup()
+    turtle.teleport(0,0)
+    turtle.left(90)
     for grid in print_collumn:
-        for position in grid
+        for position in grid:
+            if print_collumn[counting][counter] == 0:
+                turtle.penup()
+            else:
+                turtle.pendown()
+            turtle.forward(20)
+            counter+=1
+        counting +=1 
+        counter = 0
+        distance += 20
+        turtle.penup()
+        turtle.teleport(distance,0)
+
+#function that builds the game
+def start():
+    while True:
+        generate(row)
+        generate(collumn)
+        if isSolvable(row,collumn) == True:
+            maker(row,collumn)
+            break
+
+
+#call start
+start()
+
+            
 
