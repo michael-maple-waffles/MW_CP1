@@ -4,6 +4,7 @@
 #import libraries
 import random
 import turtle
+import time
 
 #function that randomly generates every peice in a collumn or row
 pick = (0,1)
@@ -16,13 +17,14 @@ def generate(direction):
     counter = 0 
     checking = 0
     for direct in direction:
+        checking = 0
         if counter == 0:
             counter += 1
             continue
         elif counter < 7:
             for cord in direct:
                 form = random.choice(pick)
-                direction[counter][cord] = form
+                direction[counter][checking] = form
                 checking += 1
             counter += 1
         else:
@@ -51,11 +53,11 @@ def isSolvable(grid_row, grid_collumn):
         if grid_collumn[x][y-1] == 0:
             stack.append((x+1,y))
 
-        if grid_row[y-1][x-1] == 0:
-            if y > 0:
-                stack.append((x,y-2))
-
         if grid_row[y][x-1] == 0:
+            if y-1 != 0:
+                stack.append((x,y-1))
+
+        if grid_row[y-1][x-1] == 0:
             if y < 7:
                 stack.append((x,y+1))
     else:
@@ -109,9 +111,13 @@ def start():
     while True:
         generate(row)
         generate(collumn)
-        if isSolvable(row,collumn) == True:
+        select = isSolvable(row,collumn)
+        if select == True:
             maker(row,collumn)
+            #time.sleep(2)
             break
+        elif select == False:
+            continue
 
 
 #call start
