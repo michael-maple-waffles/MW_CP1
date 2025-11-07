@@ -114,7 +114,7 @@ def start():
         select = isSolvable(row,collumn)
         if select == True:
             maker(row,collumn)
-            time.sleep(5)
+            turtle.done()
             break
         elif select == False:
             continue
@@ -122,6 +122,3 @@ def start():
 
 #call start
 start()
-
-            
-
