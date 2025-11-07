@@ -34,7 +34,7 @@ def generate(direction):
 def isSolvable(grid_row, grid_collumn):
     size = len(grid_row) - 1
     visited = []
-    stack = [(1,1)]
+    stack = [(0,0)]
 
     while stack:
         x, y = stack.pop()
@@ -47,17 +47,17 @@ def isSolvable(grid_row, grid_collumn):
 
         visited.append((x,y))
 
-        if grid_collumn[x-1][y-1] == 0:
+        if grid_collumn[x][y] == 0:
             stack.append((x-1,y))
 
-        if grid_collumn[x][y-1] == 0:
+        if grid_collumn[x+1][y] == 0:
             stack.append((x+1,y))
 
-        if grid_row[y][x-1] == 0:
-            if y-1 != 0:
+        if grid_row[y][x] == 0:
+            if y != 0:
                 stack.append((x,y-1))
 
-        if grid_row[y-1][x-1] == 0:
+        if grid_row[y+1][x] == 0:
             if y < 7:
                 stack.append((x,y+1))
     else:
@@ -114,7 +114,7 @@ def start():
         select = isSolvable(row,collumn)
         if select == True:
             maker(row,collumn)
-            #time.sleep(2)
+            time.sleep(2)
             break
         elif select == False:
             continue
