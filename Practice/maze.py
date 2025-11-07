@@ -114,7 +114,7 @@ def start():
         select = isSolvable(row,collumn)
         if select == True:
             maker(row,collumn)
-            time.sleep(2)
+            time.sleep(5)
             break
         elif select == False:
             continue
