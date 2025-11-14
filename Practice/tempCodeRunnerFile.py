@@ -1,0 +1,1 @@
+for option in list(menu[selection].keys):

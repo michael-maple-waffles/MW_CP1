@@ -1,5 +1,10 @@
 #MW_CP1 order up!
 
+
+
+import time
+import random
+
 #variables:
 
 #checking = []
@@ -11,8 +16,8 @@ menu = {
         "Dirty Burger" :8.75,
         "Moo Moo Steak" :15.81,
         "Turkey Pot Pie" :10.56,
-        "Skinny Girl Salad for one" :13.30,
-        "Cluckers Famous CluckBurger" :12.21
+        "Skinny Girl Salad For One" :13.30,
+        "Cluckers Famous Cluck Burger" :12.21
     },
     
     #SIDES: dictionary:
@@ -62,7 +67,7 @@ order = {
     "payment" :0.00
 }
 #EMPLOYEES = Dictionary
-employess = {
+employees = {
     #TIFFANY = Dictionary:
     "tiffany" : {
         #line1
@@ -123,69 +128,86 @@ employess = {
 }
 
 #function that displays the menue DISPLAY(selection):
-
+def display(selection):
+    choices = []
     #choices.append(selection)
-
+    choices.append(selection)
     #for option in selection:
-
+    for option in list(menu[selection].keys()):
         #choices.append(option)
-
+        choices.append(option)
     #return choices
-
+    return choices
 
 #function that shows the price of the selected dish PRICE(SELECTION)
-
+def paying(selection):
+    price = 0.00
     #for i in order[SELECTION]
-
+    for i in order[selection]:
         #order[PAYMENT] += Menue[Selection][i]
-
+        price += menu[selection][i]
     #return order payment
+    return price
 
 
 #function that allows the user to select what they would like SELECT(SELECTION)
-
+def select(selection, employee):
     #while True:
-
-        #show emloyee's line for asking what dishes they would like
-
+    while True:
+        item = input("What would you like? if you are done type 'No'").title()
         #if item == "No":
-
+        if item == "No":
             #break
-
+            break
         #elif item not in MENUE[SELECTION].keys():
-
+        elif item not in menu[selection].keys():
             #employee reply item wrong
-
+            print(f"{employees[employee]["linewrong"]}")
         #else: 
-
+        else:
             #ORDER[SELECTION].append(item)
+            order[selection].append(item)
             #show current price is :PRICE(SELECTION)
+            print(f"your current price is ${order["payment"] + paying(selection)}.")
+    return paying(selection)
 
 
 #function that peices everything together PLAY(employee)
-
+def play(employee):
+    print(f"{employees[employee]["welcome"]}")
     #show: employees[employee]["line1"]
-
+    print(f"{employees[employee]["mains"]}")
     #show DISPLAY("mains")
-
+    for i in display("mains"):
+        print(i)
+    order["payment"] += select("mains", employee)
     #show employees[employee]["line2"]
-
+    print(f"{employees[employee]["sides"]}")
     #show DISPLAY("sides")
-
+    for i in display("sides"):
+        print(i)
+    select("sides", employee)
     #show employees[employee]["line3"]
-
+    print(f"{employees[employee]["drinks"]}")
     #show DISPLAY("dinks")
-
+    for i in display("drinks"):
+        print(i)
+    select("drinks", employee)
     #show employees[employee]["line4"]
-
+    print(f"{employees[employee]["desserts"]}")
     #show DISPLAY("desserts")
-
+    for i in display("desserts"):
+        print(i)
+    select("desserts", employee)
     #show employees[employee]["order_complete"]
-
+    print(f"{employees[employee]["orderdone"]}")
     #show employees[employee]["order_arrival"]
+    time.sleep(3)
+    print(f"{employees[employee]["orderarrived"]}")
 
 
 
 #SERVER = random.choice(employees.keys())
-
+server = random.choice(list(employees.keys()))
 #PLAY(SERVER)
+play(server)
