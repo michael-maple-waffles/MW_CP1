@@ -87,3 +87,277 @@
     #}
 #}
 
+#Locations = {Dictionary of all locations on the map
+
+    #Lumray Village : {DICTIONARY of rooms in town lands
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A {DICTIONARY of all important things in this room(including all rooms it connects too)
+
+        #}
+
+        #3A {DICTIONARY of all important things in this room(including all rooms it connects too)
+
+        #}
+
+        #1B {Dictionary of all important things in this room (including all rooms it connects too)
+
+        #}
+
+        #2B {Dictionary of all important things in this room(including all rooms it connects too)
+
+        #}
+
+        #3B {Dictionary of all important things in this room(including all rooms it connects too)
+
+        #}
+
+        #4B {Dictionary of all important things in this room(including all rooms it connects too)
+
+        #}
+
+        #5B {Dictionary of all important things in this room(including all rooms it connects too)
+
+        #}
+    #}
+
+    #Roaring peaks = {DICTIONARY of all rooms in this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #6C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+    #}
+
+    #beastly Bellows = {DICTIONARY of all rooms in Beasly bellows
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #6A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #7A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #8A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #9A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #10A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+    #}
+
+    #fallen caverns = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #6C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+    #}
+
+    #soft meadows = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+    #}
+
+    #Witches cauldren = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+    #}
+
+    #Witches mansion = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+    #}
+
+    #Witches Gathering = {DICTIONARY of all rooms inside this area
+#}
