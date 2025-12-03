@@ -85,6 +85,7 @@
     #MOVEMENT : {DICTIONARY of all different movement effects
 
     #}
+
 #}
 
 #Locations = {Dictionary of all locations on the map
@@ -357,7 +358,100 @@
         #5B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
         #}
+
     #}
 
     #Witches Gathering = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+    #}
+
+    #kings spire = {DICTIONARY of all rooms inside this area
+
+        #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #4A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #5A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #6A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1D : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1E : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #1F : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
+
+        #7A : {DICTIONARY of all important things in room1(including all rooms it connects too)
+
+        #}
 #}
+
+#function for damage (dmg, receiver)
+    
+    #reveiver hp - dmg
+
+#function for player turn combat: this first takes in what the player's current equipment is and thenuses that to set up the players actions, by 1 showing there current combo, 2 showing there current hope status and how many actions they have left, 3 looping over the dictionary of all there actions and checking what they would like to do.
+
+#function for monster turn combat (simple): this will take in the monsters action and do something with it, either dealing damage or applying a debuff or buff to themself.
+
+#function for monster turn combat (complex): this will have multiple attack types that will take in a players X and Y location to see if they aer going to get hit and print the feild in a way the player will understand how to dodge.
+
+#combat peice together: this will peice together all the combat functions for extremely simple use when attaching them to the many monster variables after this
+
+#function for each monster and there moves: each of these functions will set the monster variable (a dictionary) of all the things that are important for them, they will then call the combat peice together function and input there information into the function (there will be a lot of them)
+
+#function for rooms: This will take in the dictionary of wich location you are in, how many times you have been in it, and what you can do in it (both what you have done and still can do), then it will take in the dictionary of all the places you can go too, and whether or not you have the movement to enter it.
