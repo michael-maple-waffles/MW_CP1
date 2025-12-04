@@ -88,40 +88,48 @@
 
 #}
 
-#Locations = {Dictionary of all locations on the map
+#Locations = {Dictionary of all locations on the map #how this works, the first key will be titled entrance and it will be attached to all the dialogues that might be described as well as all of the options of things to do, doing certain actions might eliminate the ability to do so and thus cause the player to need to see a different line og dialogue next time they enter. all of these rooms will have a dictionary within it, describing the locations that this room connects too, as well as all the requirments that the player might need to go to that specific room. they will then have key titled enemies which will either be False or have a specific enemy name attached to one of the enemies in the game this will allow for the room function to call a specific enemy as a function. then they will have a key titled Street lamp, the player will be able to ignite it allowing them to return to that location if they die (this value is either Ture or False) the next keys will all be optional to each room, and have specific things like whether or not this contains a light or ability pick up, and other similar things.
 
     #Lumray Village : {DICTIONARY of rooms in town lands
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room is a dark grotto with a small street lamp inside it, the player will get multiple lines of dialogue the player will be forced to ignite the lamp and then go left (This room attaches to "townlands"["2A"])
         #}
 
         #2A {DICTIONARY of all important things in this room(including all rooms it connects too)
 
+            #This room has a small enemy frog and will be used to have a mini tutorial about how to do basic combat same general style as room 1A (this room attaches to both "townlands"["1A"] and "townlands"["3A"])
         #}
 
         #3A {DICTIONARY of all important things in this room(including all rooms it connects too)
 
+            #this room contains a Large enemy Frog and will describe in mini tutorial format how complex combat works (connects to "townlands"["2A"] and "townlands"[2B])
         #}
 
         #1B {Dictionary of all important things in this room (including all rooms it connects too)
 
+            #this is the actual townlands, this room contains the glimmer beast(complex monster) after beating it the player will be able to teleport to all future ignited street lamps by going to a location with a street lamp, (this room connects to "Roaring peaks"["1A"] and "townlands"["1B"])
         #}
 
         #2B {Dictionary of all important things in this room(including all rooms it connects too)
 
+            #This room contains a street lamp, (connects to room "townlands"["1B"] and "townlands"["1C"])
         #}
 
         #3B {Dictionary of all important things in this room(including all rooms it connects too)
 
+            #contains character Iyda an old ladie who wishes to see the town in its former state (connects to rooms "townlands"["2B"] and "townlands"["4B"])
         #}
 
         #4B {Dictionary of all important things in this room(including all rooms it connects too)
 
+            #contains character Gette who really likes to fight, you can choose to fight him, or brush him off your choice, (connects to rooms "townlands"[3B] and "townlands"[5B])
         #}
 
         #5B {Dictionary of all important things in this room(including all rooms it connects too)
-
+            
+            #here you see the large feilds with the massive tower in the distance as well as the desolate peaks ahead (connects to rooms "townlands"[4B] and "soft meadows"[1A])
         #}
     #}
 
@@ -129,18 +137,22 @@
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this is the cross roads the player can take, they see a sign and the huge mountain above, they can either go up the roaring peaks, fo through the canyon to the beastly bellows or down to the fallen caverns (connects to rooms  townlands[1B] roaring peaks[2a] and beastly bellows[1A] and fallen caverns[1A])
         #}
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #as you ascend you meet another friend Champ, he is determined to explore every avenue of the two mountain ranges, and you will meet him several times about your advntures (connects to rooms roaringpeaks[1A] and [3A])
         #}
 
         #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #This room contains a street lamp, but first you have to fight raging thunderbid(simple) (this room connects to roaring peaks[1b] and [2a] and [1c])
         #}
 
         #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room has a battle with jolt flock(complex) (this room connects to raging peaks[3a] and [2B])
         #}
 
         #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
