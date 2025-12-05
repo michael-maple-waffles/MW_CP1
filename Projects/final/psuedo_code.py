@@ -137,7 +137,7 @@
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-            #this is the cross roads the player can take, they see a sign and the huge mountain above, they can either go up the roaring peaks, fo through the canyon to the beastly bellows or down to the fallen caverns (connects to rooms  townlands[1B] roaring peaks[2a] and beastly bellows[1A] and fallen caverns[1A])
+            #this is the cross roads the player can take, they see a sign and the huge mountain above, they can either go up the roaring peaks, fo through the canyon to the beastly bellows or down to the fallen caverns (connects to rooms  townlands[1B] roaring peaks[2a] and beastly bellows[1A] - requires jolt jump| and fallen caverns[1A] - requires frost stride|)
         #}
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
@@ -147,7 +147,7 @@
 
         #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-            #This room contains a street lamp, but first you have to fight raging thunderbid(simple) (this room connects to roaring peaks[1b] and [2a] and [1c])
+            #This room contains a street lamp, but first you have to fight raging thunderbird(simple) (this room connects to roaring peaks[1b] and [2a] and [1c])
         #}
 
         #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
@@ -157,42 +157,52 @@
 
         #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room has a sign describing how most people who continue forwards often get struk by lightnign and get killed. (connects to rooms roaring peaks [1B] [3B] and [4B]- room requires thunder jump)
         #}
 
         #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room contains a street lamp (connects to rooms roaring peaks [2B] [5B] and [4C])
         #}
 
         #4B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room contains a big fight with the last thunderKing, defeating this bird will allow you to collect the light of lightning (connects to room roaring peaks [2B])
         #}
 
         #5B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #this room contains a fight with Zeri and Zips, a girl and her thunder bird(complex) defeating them will allow you to collect the ability Thunder jump (connects to room roaring peaks [3B])
         #}
 
         #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #fight with a raging jolt bird (describes the desolation of the frigid peak ahead) (connects to rooms raging peaks [3a] and [2C])
         #}
 
         #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #player a Frostling(simple) then they get to meet Champ again, (connects to rooms roaring peaks 1C and 4C and 3c)
         #}
 
         #3C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            # contains a street lamp (connects to rooms 2c and 6c)
         #}
 
         #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #simple fight with a frost strider (connects to rooms raging peaks 3b and 5C)
         #}
 
         #5C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+        #Here the player finds the tomb of beasts with five gems, depending on how many lights(beastly) the player has collected the tomb will show a different number of gems glowing, when all five are glowing, the player will be able to collect  the weighted lantern (connects to room 4c)
         #}
 
         #6C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #The player finds a corps holding tightly onto a small egg, upon the player trying to grab it, combat will be initiated where the egg hatches and the player must tame the beast granting them the light of snow and frost stride (connects to roaring peaks 3c beasly bellows 10A)
         #}
     #}
 
@@ -200,10 +210,12 @@
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #player finds champ (he will be camping and either be ehausted or thrilled, deppending on when you run into him in the bellows) (connects to rooms roaring peaks 1A and beastly bellows 2a and 3a)
         #}
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #connects to 
         #}
 
         #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
