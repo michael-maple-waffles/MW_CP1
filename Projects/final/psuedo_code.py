@@ -129,7 +129,7 @@
 
         #5B {Dictionary of all important things in this room(including all rooms it connects too)
             
-            #here you see the large feilds with the massive tower in the distance as well as the desolate peaks ahead (connects to rooms "townlands"[4B] and "soft meadows"[1A])
+            #here you see the large feilds with the massive tower in the distance as well as the desolate peaks ahead (connects to rooms "townlands"[4B] and ##"soft meadows"[1A]##)
         #}
     #}
 
@@ -210,44 +210,52 @@
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-            #player finds champ (he will be camping and either be ehausted or thrilled, deppending on when you run into him in the bellows) (connects to rooms roaring peaks 1A and beastly bellows 2a and 3a)
+            #player finds champ (he will be camping and either be ehausted or thrilled, deppending on when you run into him in the bellows) (connects to rooms roaring peaks 1A and beastly bellows 2a and 3a and 5a)
         #}
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-            #connects to 
+            #contains a simple fight with a steam slug (connects to rooms beastly bellows 1A and 4A)
         #}
 
         #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a street lamp, has a simple fight with steam slug(connects to rooms 1A and 4A)
         #}
 
         #4A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a lever (connects to rooms beaslty bellows 5A 6A and 8A)
         #}
 
         #5A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a lever (connects to beaslty bellows 4A 6A and 7A)
         #}
 
         #6A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a beating mechanical heart of steam, upon fliping all 4 levers A complex fight can happen were you get the weighted lantern and light of steam on its defeat. (conects to rooms beastly bellows 4A 5A 7A and 8A)
         #}
 
         #7A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a lever (connects to rooms beastly bellows 5A 6A 8A and 9A)
         #}
 
         #8A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a lever (connects to rooms beastly bellows 4A 6A 7A)
         #}
 
         #9A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a street lamp (connects to rooms beastly bellows 7A and 10A)
         #}
 
         #10A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a simple fight with a steam slug you can meet champ here, if you met him in room 1A you wont see him.(connects to rooms beastly bellows 9a and roaring peaks 6C)
         #}
     #}
 
@@ -255,10 +263,12 @@
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #as you descend down, light becomes scarce, contains a complex fight with a Grand flame hopper. (connects roaring peaks 1A and fallen caverns 2A)
         #}
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #you see a flame hopper hop away to Room 1B contains a street lamp
         #}
 
         #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
@@ -302,7 +312,7 @@
         #}
     #}
 
-    #soft meadows = {DICTIONARY of all rooms inside this area
+    #""soft meadows = {DICTIONARY of all rooms inside this area
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
@@ -315,9 +325,9 @@
         #3A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
         #}
-    #}
+    #}""
 
-    #Witches cauldren = {DICTIONARY of all rooms inside this area
+    #""Witches cauldren = {DICTIONARY of all rooms inside this area
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
@@ -353,11 +363,11 @@
 
         #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-        #}
+        #}""
 
     #}
 
-    #Witches mansion = {DICTIONARY of all rooms inside this area
+    #""Witches mansion = {DICTIONARY of all rooms inside this area
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
@@ -381,11 +391,11 @@
 
         #5B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-        #}
+        #}""
 
     #}
 
-    #Witches Gathering = {DICTIONARY of all rooms inside this area
+    #""Witches Gathering = {DICTIONARY of all rooms inside this area
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
@@ -411,9 +421,9 @@
 
         #}
 
-    #}
+    #}""
 
-    #kings spire = {DICTIONARY of all rooms inside this area
+    #""#kings spire = {DICTIONARY of all rooms inside this area
 
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
@@ -462,7 +472,7 @@
         #7A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
         #}
-#}
+#}"""
 
 #function for damage (dmg, receiver)
     
