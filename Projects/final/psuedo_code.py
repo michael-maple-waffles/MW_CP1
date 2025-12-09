@@ -268,48 +268,58 @@
 
         #2A : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-            #you see a flame hopper hop away to Room 1B contains a street lamp
+            #you see a flame hopper hop away to Room 1B |contains a street lamp (connects to rooms fallen caverns 1A and 1B and 1C)
         #}
 
         #1B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #connects to rooms fallen caverns 2a and 2B
         #}
 
         #2B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a complex fight with a grand flame king. (connects to rooms 1B and 3B)
         #}
 
         #3B : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
-        #}
-
-        #4B : {DICTIONARY of all important things in room1(including all rooms it connects too)
-
+            #contains a broken street lamp, player acquires this as a weapon (connects to rooms 2B)
         #}
 
         #1C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a simple fight with a sylph wing (conects to rooms 2A and 2C)
         #}
 
         #2C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a streetlamp (connects to rooms 1c and 3c and 4c )
         #}
 
         #3C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains complex iyda the wind seamstress (connects to rooms)
         #}
 
         #4C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains a simple fight with a sylph wing(connects to rooms 2c and 5c)
         #}
 
         #5C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains fight with the last sylph(complex) (connects to rooms 4c and 6c)
         #}
 
         #6C : {DICTIONARY of all important things in room1(including all rooms it connects too)
 
+            #contains the light of the wind
         #}
+    #}
+
+    #the den of beasts{
+
+        #upon collecting all the lights the player will gain access to this area it contains the last fight with the god of beasts Naalian (connects to room roaring peaks 5C)
     #}
 
     #""soft meadows = {DICTIONARY of all rooms inside this area
