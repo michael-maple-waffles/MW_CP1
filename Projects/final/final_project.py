@@ -78,53 +78,100 @@ rin = {
     #MOVEMENT : {DICTIONARY of all different movement effects
 
     #}
+}
 
 #}
-}
+
+
 #Locations = {Dictionary of all locations on the map #how this works, the first key will be titled entrance and it will be attached to all the dialogues that might be described as well as all of the options of things to do, doing certain actions might eliminate the ability to do so and thus cause the player to need to see a different line og dialogue next time they enter. all of these rooms will have a dictionary within it, describing the locations that this room connects too, as well as all the requirments that the player might need to go to that specific room. they will then have key titled enemies which will either be False or have a specific enemy name attached to one of the enemies in the game this will allow for the room function to call a specific enemy as a function. then they will have a key titled Street lamp, the player will be able to ignite it allowing them to return to that location if they die (this value is either Ture or False) the next keys will all be optional to each room, and have specific things like whether or not this contains a light or ability pick up, and other similar things.
-
+locations = {
     #Lumray Village : {DICTIONARY of rooms in town lands
-
+    "lumray_village" :{
         #1A : {DICTIONARY of all important things in room1(including all rooms it connects too)
-
+        "1A" : {
+            "enters" : 0,
+            "street_lamp" : (True, False),
+            "dialogue1" : "You wake up inside a cavern, a small lantern lays beside you, and in it there seems to be a small creature born in flame.",
+            "dialogue2" : "You arrive at the same place you started The Street lamp still sits there, you still remember beeing here.",
+            "events": False,
+            "connections": (["lumray_village"]["2A"],)
             #this room is a dark grotto with a small street lamp inside it, the player will get multiple lines of dialogue the player will be forced to ignite the lamp and then go left (This room attaches to "townlands"["2A"])
         #}
-
+        },
         #2A {DICTIONARY of all important things in this room(including all rooms it connects too)
-
+        "2A" : {
+            "enters" : 0,
+            "street_lamp" : (False, False),
+            "dialogue1" : "As you continue forward you find small feirce frog, it is ready for battle!",
+            "dialogue2" : "The green path beneath your feet is just as you remember, a new frog has taken its place! prepare for combat!",
+            "events": {
+                "enemy" : {
+                    "requirements" : False,
+                    "oponent" : "small_frog",
+                    "defeated" : (False, True)
+                }
+            },
+            "connections": (["lumray_village"]["1A"], ["lumray_village"]["3A"],)
             #This room has a small enemy frog and will be used to have a mini tutorial about how to do basic combat same general style as room 1A (this room attaches to both "townlands"["1A"] and "townlands"["3A"])
         #}
-
+        },
         #3A {DICTIONARY of all important things in this room(including all rooms it connects too)
-
+        "3A" : {
+            "enters" : 0,
+            "street_lamp" : (False, False),
+            "dialogue1" : "*kurrrrstomp* oh dear, it seams that you have found a big one... gear up!",
+            "dialogue2" : "The corpse of the frog you once murdered lies there, in desolation",
+            "events": {
+                "enemy" : {
+                    "requirements" : False,
+                    "oponent" : "large_frog",
+                    "defeated" : (False, False)
+                }
+            },
+            "connections": (["lumray_village"]["2A"], ["lumray_village"]["1B"],)
             #this room contains a Large enemy Frog and will describe in mini tutorial format how complex combat works (connects to "townlands"["2A"] and "townlands"[2B])
         #}
-
+        },
         #1B {Dictionary of all important things in this room (including all rooms it connects too)
+        "1B" : {
+            "enters" : 0,
+            "street_lamp" : (True, False),
+            "dialogue1" : "*kroooooooo* the flowing antlers of the beast are awe inspiring, but its beauty is not just gowing unanswered, its looking for a fight.",
+            "dialogue2" : "You arrive at the foot of the town, the corpse of the glimmer beast still sitting there.",
+            "events": {
+                "enemy" : {
+                    "requirements" : False,
+                    "oponent" : "glimmer_beast",
+                    "defeated" : (False, False)
+                },
 
-            #this is the actual townlands, this room contains the glimmer beast(complex monster) after beating it the player will be able to teleport to all future ignited street lamps by going to a location with a street lamp, (this room connects to "Roaring peaks"["1A"] and "townlands"["1B"])
+                "collectable" : {
+                    "requirments" : "defeat",
+                    "glimmer_hop" : True,
+                }
+            },
+            "connections": (["roaring_peaks"]["1A"], ["lumray_village"]["2B"],)
+            #this is the actual townlands, this room contains the glimmer beast(complex monster) after beating it the player will be able to teleport to all future ignited street lamps by going to a location with a street lamp, (this room connects to "Roaring peaks"["1A"] and "townlands"["2B"])
         #}
+        },
 
         #2B {Dictionary of all important things in this room(including all rooms it connects too)
-
-            #This room contains a street lamp, (connects to room "townlands"["1B"] and "townlands"["1C"])
+        "2B" : {
+            "enters" : 0,
+            "street_lamp" : (False, False),
+            "dialogue1" : "*kroooooooo* the flowing antlers of the beast are awe inspiring, but its beauty is not just gowing unanswered, its looking for a fight.",
+            "dialogue2" : "You arrive at the foot of the town, the corpse of the glimmer beast still sitting there.",
+            "events": False,
+            "connections": (["lumray_village"]["3A"], ["lumray_village"]["1B"], ["lumray_village"]["3B"])
+            #, (connects to room "townlands"["1B"] and "townlands"["3B"])
         #}
-
+        },
         #3B {Dictionary of all important things in this room(including all rooms it connects too)
-
+        
             #contains character Iyda an old ladie who wishes to see the town in its former state (connects to rooms "townlands"["2B"] and "townlands"["4B"])
         #}
-
-        #4B {Dictionary of all important things in this room(including all rooms it connects too)
-
-            #contains character Gette who really likes to fight, you can choose to fight him, or brush him off your choice, (connects to rooms "townlands"[3B] and "townlands"[5B])
-        #}
-
-        #5B {Dictionary of all important things in this room(including all rooms it connects too)
-            
-            #here you see the large feilds with the massive tower in the distance as well as the desolate peaks ahead (connects to rooms "townlands"[4B] and ##"soft meadows"[1A]##)
-        #}
     #}
+    }
 
     #Roaring peaks = {DICTIONARY of all rooms in this area
 
@@ -314,10 +361,10 @@ rin = {
 
         #upon collecting all the lights the player will gain access to this area it contains the last fight with the god of beasts Naalian (connects to room roaring peaks 5C)
     #}
-
+}
 #function for damage (dmg, receiver)
     
-    #reveiver hp - dmg
+    #receiver hp - dmg
 
 #function for player turn combat: this first takes in what the player's current equipment is and thenuses that to set up the players actions, by 1 showing there current combo, 2 showing there current hope status and how many actions they have left, 3 looping over the dictionary of all there actions and checking what they would like to do.
 
