@@ -94,7 +94,7 @@ locations = {
             "dialogue1" : "You wake up inside a cavern, a small lantern lays beside you, and in it there seems to be a small creature born in flame.",
             "dialogue2" : "You arrive at the same place you started The Street lamp still sits there, you still remember beeing here.",
             "events": False,
-            "connections": (["lumray_village"]["2A"],)
+            "connections": (["lumray_village", "2A"],)
             #this room is a dark grotto with a small street lamp inside it, the player will get multiple lines of dialogue the player will be forced to ignite the lamp and then go left (This room attaches to "townlands"["2A"])
         #}
         },
@@ -109,7 +109,11 @@ locations = {
                     "requirements" : False,
                     "oponent" : "small_frog",
                     "defeated" : (False, True)
-                }
+                },
+
+                "character" : False,
+
+                "collectable" : False,
             },
             "connections": (["lumray_village"]["1A"], ["lumray_village"]["3A"],)
             #This room has a small enemy frog and will be used to have a mini tutorial about how to do basic combat same general style as room 1A (this room attaches to both "townlands"["1A"] and "townlands"["3A"])
@@ -126,7 +130,11 @@ locations = {
                     "requirements" : False,
                     "oponent" : "large_frog",
                     "defeated" : (False, False)
-                }
+                },
+
+                "character" : False,
+
+                "collectable" : False
             },
             "connections": (["lumray_village"]["2A"], ["lumray_village"]["1B"],)
             #this room contains a Large enemy Frog and will describe in mini tutorial format how complex combat works (connects to "townlands"["2A"] and "townlands"[2B])
@@ -145,12 +153,14 @@ locations = {
                     "defeated" : (False, False)
                 },
 
+                "character" : False,
+
                 "collectable" : {
-                    "requirments" : "defeat",
-                    "glimmer_hop" : True,
+                    "requirments" : "defeat_glimmer_beast",
+                    "movement" : "glimmer",
                 }
             },
-            "connections": (["roaring_peaks"]["1A"], ["lumray_village"]["2B"],)
+            "connections": (["roaring_peaks", "1A"], ["lumray_village", "2B"],)
             #this is the actual townlands, this room contains the glimmer beast(complex monster) after beating it the player will be able to teleport to all future ignited street lamps by going to a location with a street lamp, (this room connects to "Roaring peaks"["1A"] and "townlands"["2B"])
         #}
         },
@@ -162,14 +172,42 @@ locations = {
             "dialogue1" : "*kroooooooo* the flowing antlers of the beast are awe inspiring, but its beauty is not just gowing unanswered, its looking for a fight.",
             "dialogue2" : "You arrive at the foot of the town, the corpse of the glimmer beast still sitting there.",
             "events": False,
-            "connections": (["lumray_village"]["3A"], ["lumray_village"]["1B"], ["lumray_village"]["3B"])
+            "connections": (["lumray_village","3A"], ["lumray_village", "1B"], ["lumray_village", "3B"])
             #, (connects to room "townlands"["1B"] and "townlands"["3B"])
         #}
         },
         #3B {Dictionary of all important things in this room(including all rooms it connects too)
-        
+        "3B" : {
+            "enters" : 0,
+            "street_lamp" : (False, False),
+            "dialogue1" : "you arrive at the foothils of the town.",
+            "dialogue2" : False,
+            "events": {
+                "enemy" : False,
+
+                "character" : {
+                    "iyda": {
+                        "dialogue1" : "insert dialogue",
+                        "dialogue2" : "insert dialogue",
+
+                        "dialogue_special" : {
+                            "requirement" : "silkwings",
+                            "dialogue" : "insert dialogue",
+                        }
+                    }
+                },
+
+                "collectabale" : {
+                    "requirements" : "silkwings",
+                    "lantern" : "chainless lantern"
+                }
+
+
+            },
+            "connections": (["lumray_village","2B"])
             #contains character Iyda an old ladie who wishes to see the town in its former state (connects to rooms "townlands"["2B"] and "townlands"["4B"])
         #}
+        }
     #}
     }
 
@@ -362,6 +400,7 @@ locations = {
         #upon collecting all the lights the player will gain access to this area it contains the last fight with the god of beasts Naalian (connects to room roaring peaks 5C)
     #}
 }
+
 #function for damage (dmg, receiver)
     
     #receiver hp - dmg
@@ -377,3 +416,27 @@ locations = {
 #function for each monster and there moves: each of these functions will set the monster variable (a dictionary) of all the things that are important for them, they will then call the combat peice together function and input there information into the function (there will be a lot of them)
 
 #function for rooms: This will take in the dictionary of wich location you are in, how many times you have been in it, and what you can do in it (both what you have done and still can do), then it will take in the dictionary of all the places you can go too, and whether or not you have the movement to enter it.
+def roomFunc(biom, room):
+    global locations
+    global rin
+
+    if locations[biom][room]["enters"] == 0:
+        print(locations[biom][room]["dialogue1"])
+        locations[biom][room]["enters"] += 1
+    elif locations[biom][room]["enters"] == 1 and locations[biom][room]["dialogue2"] != False:
+        print(locations[biom][room]["dialogue2"])
+
+    if locations[biom][room]["street_lamp"] == (True, False) and (biom == "lumray_village" and room == "1A" ) is False:
+        print("This room has Street lamp")
+        locations[biom][room]["street_lamp"] = (True, True)
+    elif locations[biom][room]["street_lamp"] == (True, False) and (biom == "lumray_village" and room == "1A" ) is True:
+        pass
+    else:
+        pass
+
+    #make a equipment function that allows players to select there build.
+
+    if locations[biom][room]["events"] == False:
+        pass
+    elif bool(locations[biom][room]["events"]["enemy"]) == True:
+        pass
