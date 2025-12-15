@@ -14,7 +14,8 @@ rin = {
     "equipped_lantern" : "lantern",
     #equip light : y
     "equipped_light" : "fire",
-    #combo
+    #rest point
+    "rest point" : ["lumray_village", "1A"],
 
     #lanterns : {DICTIONARY of lanterns
     "lanterns" : {
@@ -415,7 +416,48 @@ locations = {
 
 #function for each monster and there moves: each of these functions will set the monster variable (a dictionary) of all the things that are important for them, they will then call the combat peice together function and input there information into the function (there will be a lot of them)
 
+def equipment():
+    print(f" your current lantern is the {rin['equipped_lantern']}\n\n your current light is {rin['equipped_light']}\n\n")
+    print("you own these lanterns:")
+    for lantern in rin["lanterns"]:
+        if lantern["owned"] == True:
+            print(f"you own {lantern}.")
+
 #function for rooms: This will take in the dictionary of wich location you are in, how many times you have been in it, and what you can do in it (both what you have done and still can do), then it will take in the dictionary of all the places you can go too, and whether or not you have the movement to enter it.
+def mover(biom, room):
+    global locations
+    global rin
+    places = {
+
+    }
+    while True:
+        options = 0
+        if locations[biom][room]["street_lamp"] == (True, True):
+            options += 1
+            print(f"if you would like to access you inventory press {options}")
+            options += 1
+            print(f"if you would like to rest here press {options}")
+        for i in locations[biom][room]["connections"]:
+            options += 1
+            print(f"press {options} room {i[1]} inside biom{i[0]}")
+            places[options] = i
+
+        choice = input("input where you would like to go: ")
+        if choice not in range(1, options):
+            print(f"ensure you are pressing a number 1-{options}")
+            pass
+        else:
+            if choice == 1 and locations[biom][room]["street_lamp"] == (True, True):
+                pass#call equipment function
+            elif choice == 2 and locations[biom][room]["street_lamp"] == (True, True):
+                rin["rest point"] = [biom, room]
+                rin["hope"] = 30
+            else:
+                section, entrance = places[choice].pop()
+                roomFunc(section, entrance)
+
+
+
 def roomFunc(biom, room):
     global locations
     global rin
@@ -425,18 +467,31 @@ def roomFunc(biom, room):
         locations[biom][room]["enters"] += 1
     elif locations[biom][room]["enters"] == 1 and locations[biom][room]["dialogue2"] != False:
         print(locations[biom][room]["dialogue2"])
+    else:
+        print(locations[biom][room]["dialogue1"])
 
     if locations[biom][room]["street_lamp"] == (True, False) and (biom == "lumray_village" and room == "1A" ) is False:
         print("This room has Street lamp")
         locations[biom][room]["street_lamp"] = (True, True)
-    elif locations[biom][room]["street_lamp"] == (True, False) and (biom == "lumray_village" and room == "1A" ) is True:
+    elif locations[biom][room]["street_lamp"] == (True, False) and ((biom == "lumray_village" and room == "1A" ) == False):
         pass
     else:
         pass
 
-    #make a equipment function that allows players to select there build.
 
     if locations[biom][room]["events"] == False:
         pass
-    elif bool(locations[biom][room]["events"]["enemy"]) == True:
-        pass
+    else:
+        if bool(locations[biom][room]["events"]["enemy"]) == True:
+            pass #add if statements including every enemy
+
+        if bool(locations[biom][room]["events"]["character"]) == True:
+            pass #add if statements for dialogue
+
+        if bool(locations[biom][room]["events"]["collectable"]) == True:
+            pass #add if statements for collectable checking
+
+    mover(biom, room)
+    
+
+    
