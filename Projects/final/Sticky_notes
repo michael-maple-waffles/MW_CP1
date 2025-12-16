@@ -1,0 +1,23 @@
+STICKY NOTE FOR FINAL
+
+TO DO
+
+1. COMBAT
+    a. BUILD PLAYER COMBAT 
+    b. BUILD ENEMY COMBATS(THEIR WILL BE MULTIPLE)
+    --try to build one function that will apploy to all, and thn use it for each of your enemies--
+    #c. IF TIME BUILD COMPLEX COMBAT... YOU WONT HAVE TIME
+    d. inside the location room function call combat/ set up combat.
+
+    A. MONSTER DICTIONARY
+        1. agility
+        2. defence
+        3. health
+        4. effects : specifically buffs and debuffs
+        5. a dictionary with absolutlyu every ability that they can do
+2. CHARACTERS
+    a. dont spend to much time on this... if you want you can scrap the chainless lantern as a whole.
+3. COLLECTABALES
+    a. REALLY WONT BE TOO HARD JUST FIGURE OUT HOW TO DO REQUIREMENTS
+4.FINISH OUT EVERY ROOM IN THE GAME
+    GOD MICHAEL JUST DO THE BAIR MINIMUM LMAO
